@@ -8,6 +8,8 @@
     "postinstall": "cd node_modules/babel-plugin-transform-pipeline && yarn"
   },
   "dependencies": {
+    "koa": "^2.3.0",
+    "koa-api-logger": "^1.0.5",
     "pipefn": "^1.0.1",
     "source-map-support": "^0.4.17"
   },

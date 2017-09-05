@@ -1,3 +1,5 @@
 import { server as serverOptions } from '../config';
+import app from './server';
 
-console.log(serverOptions);
+app.listen(serverOptions);
+console.log(new Date());
