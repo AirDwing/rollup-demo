@@ -1,5 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs';
+import nodeResolve from 'rollup-plugin-node-resolve';
 import path from 'path';
 
 export default {
@@ -12,5 +14,13 @@ export default {
   external: [
     path.resolve(__dirname, '../config')
   ],
-  plugins: [babel()]
+  plugins: [
+    nodeResolve({
+      jsnext: true
+    }),
+    commonjs({
+      exclude: ['node_modules/**', 'src/**']
+    }),
+    babel()
+  ]
 };
